@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.tarotapp" version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>TarotApp</name>
+    <content src="index.html" />
+
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+
+    <platform name="android">
+            <icon src="res/icon/android/ic_launcher.png" />
+        <preference name="AndroidInsecureFileModeEnabled" value="true" />
+
+        <edit-config file="app/src/main/AndroidManifest.xml"
+                     mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+    </platform>
+
+</widget>
